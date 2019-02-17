@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <script type="text/javascript" src="http://visjs.org/dist/vis.js"></script>
+    <link href="http://visjs.org/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./lib.js"></script>
+</head>
+<body style="width: 100vw; height: 100vh;">
+    <script type="text/javascript">
+        const { diagram, dac: { Client, Elb, Ec2Cluster, RdsCluster } } = window;
+
+        const client = new Client();
+        const loadbalancer = new Elb();
+        const webserver = new Ec2Cluster();
+        const databases = new RdsCluster();
+
+        client.getsDataFrom(loadbalancer);
+        loadbalancer.getsDataFrom(webserver);
+        webserver.getsDataFrom(databases);
+
+        diagram.render();
+    </script>
+</body>
+</html>
