@@ -2,7 +2,26 @@
 
 This library allows you to easily create diagrams of your infrastructure in code. The library aims to make creating a new diagram and changing an existing one extremely easy, requiring only a text editor.
 
+An example of a diagram that can be created with this library:
+
 ![Example diagram](./example.png)
+
+To generate this diagram, we use the following code as specified in [example.html](./example.html):
+
+```js
+const { diagram, dac: { Client, Elb, Ec2Cluster, RdsCluster } } = window;
+
+const client = new Client();
+const loadbalancer = new Elb();
+const webserver = new Ec2Cluster();
+const databases = new RdsCluster();
+
+client.getsDataFrom(loadbalancer);
+loadbalancer.getsDataFrom(webserver);
+webserver.getsDataFrom(databases);
+
+diagram.render();
+```
 
 ## Getting started
 
