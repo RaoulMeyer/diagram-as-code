@@ -39,7 +39,7 @@ customer.sendsDataTo(server);
 The following node types are currently available:
 
 ```text
-Client, Mysql, MysqlCluster, Oracle, OracleCluster, PostgreSql, PostgreSqlCluster, Elasticsearch, ElasticsearchCluster, Ec2, Ec2Cluster, Rds, RdsCluster, Elb, S3, DynamoDb, Redshift, Cloudwatch, Elasticache, Iam, SimpleDb, Swf, Cloudfront, Sqs, Sns, Route53, StorageGateway, CloudFormation, CloudSearch, Glacier, ElasticBeanstalk, Ebs, Lambda, ApiGateway
+Client, Server, ServerCluster, Database, DatabaseCluster, Mysql, MysqlCluster, Oracle, OracleCluster, PostgreSql, PostgreSqlCluster, Elasticsearch, ElasticsearchCluster, Ec2, Ec2Cluster, Rds, RdsCluster, Elb, S3, DynamoDb, Redshift, Cloudwatch, Elasticache, Iam, SimpleDb, Swf, Cloudfront, Sqs, Sns, Route53, StorageGateway, CloudFormation, CloudSearch, Glacier, ElasticBeanstalk, Ebs, Lambda, ApiGateway
 ```
 
 Each of these will get a nice icon when you use them. If you want to add something that is not in this list, you can use the `Custom` type:
