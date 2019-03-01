@@ -53,9 +53,28 @@ customer.getsDataFrom(server);
 customer.sendsDataTo(server);
 ```
 
+### Rendering the diagram
+
+To render the diagram:
+
+```js
+diagram.render();
+```
+
+You can also send some settings via the render function:
+
+```js
+diagram.render({
+    leftToRight: false,
+    container: document.body
+});
+```
+
+The values shown are the defaults.
+
 ### Customizing positioning
 
-In most cases, the way the nodes are layed out will make sense. If it doesn't you can customize the layers of the nodes. Add the layer as the second parameter to any node:
+In most cases, the way the nodes are layed out will make sense. If it doesn't, you can customize the layers of the nodes. Add the layer as the second parameter to any node:
 
 ```js
 const layerNumber = 3;
