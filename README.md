@@ -45,12 +45,18 @@ The node will automatically be added to the diagram. All node types can be suppl
 
 ### Linking nodes together
 
-There are three ways to specify data flow between nodes. An example for the nodes customer and server:
+There are three ways to specify flow between nodes. An example for the nodes customer and server:
 
 ```js
 customer.exchangesDataWith(server);
 customer.getsDataFrom(server);
 customer.sendsDataTo(server);
+```
+
+You can call any function that ends either in `with`, `from` or `to`. For example you could instead do:
+
+```js
+customer.requestsLoginPageFrom(server);
 ```
 
 ### Rendering the diagram
