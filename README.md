@@ -53,6 +53,17 @@ customer.getsDataFrom(server);
 customer.sendsDataTo(server);
 ```
 
+### Customizing positioning
+
+In most cases, the way the nodes are layed out will make sense. If it doesn't you can customize the layers of the nodes. Add the layer as the second parameter to any node:
+
+```js
+const layerNumber = 3;
+const customer = new Client('Customer', layerNumber);
+```
+
+> Important: You'll have to specify the layer for all nodes in your diagram to make this work.
+
 ### Available node types
 
 The following node types are currently available:
@@ -65,9 +76,11 @@ Each of these will get a nice icon when you use them. If you want to add somethi
 
 ```js
 const instanceCount = 17;
+const layerNumber = 3;
 const customNode = new Custom(
     'Custom label',
     'https://custom.icon.website.org/icon.png',
+    layerNumber,
     instanceCount
 );
 ```
