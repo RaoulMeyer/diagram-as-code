@@ -7,9 +7,6 @@ yarn-error.log*
 lerna-debug.log*
 .vscode
 
-# built files
-/dist
-
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -86,3 +83,6 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Mac .DS_Store cache
+.DS_Store

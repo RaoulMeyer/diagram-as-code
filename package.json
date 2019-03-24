@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup ./lib/lib.js --file ./dist/bundle.js --format umd --name diagram-as-code-js"
+    "build": "rollup ./lib/lib.js --file ./dist/lib.js --format umd --name diagram-as-code-js"
   },
   "repository": {
     "type": "git",
