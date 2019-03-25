@@ -1,0 +1,33 @@
+{
+  "name": "diagram-as-code",
+  "version": "1.0.0",
+  "description": "This library allows you to easily create diagrams of your infrastructure in code.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup ./lib/lib.js --file ./dist/lib.js --format umd --name diagram-as-code-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaoulMeyer/diagram-as-code.git"
+  },
+  "keywords": [
+    "diagrams"
+  ],
+  "author": "Raoul Meyer",
+  "contributors": [
+    "Matthew Scott"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaoulMeyer/diagram-as-code/issues"
+  },
+  "homepage": "https://github.com/RaoulMeyer/diagram-as-code#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^1.6.0"
+  }
+}
