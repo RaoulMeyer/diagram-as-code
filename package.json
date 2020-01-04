@@ -2,13 +2,14 @@
   "name": "diagram-as-code",
   "version": "1.0.0",
   "description": "This library allows you to easily create diagrams of your infrastructure in code.",
-  "main": "index.js",
+  "main": "dist/lib.js",
+  "unpkg": "dist/lib.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup ./lib/lib.js --file ./dist/lib.js --format umd --name diagram-as-code-js"
+    "build": "rollup --config rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,13 +22,16 @@
   "contributors": [
     "Matthew Scott"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/RaoulMeyer/diagram-as-code/issues"
   },
   "homepage": "https://github.com/RaoulMeyer/diagram-as-code#readme",
   "dependencies": {},
   "devDependencies": {
-    "rollup": "^1.6.0"
+    "@rollup/plugin-node-resolve": "^6.1.0",
+    "rollup": "^1.28.0",
+    "rollup-plugin-terser": "^5.1.3",
+    "vis-network": "^6.5.0"
   }
 }

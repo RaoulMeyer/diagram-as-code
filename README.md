@@ -9,8 +9,6 @@ An example of a diagram that can be created with this library:
 To generate this diagram, we use the following code as specified in [example.html](./example.html):
 
 ```js
-const { diagram, dac: { Client, Elb, Ec2Cluster, RdsCluster } } = window;
-
 const client = new Client();
 const loadbalancer = new Elb();
 const webserver = new Ec2Cluster();
